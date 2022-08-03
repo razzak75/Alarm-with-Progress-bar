@@ -1,0 +1,15 @@
+
+.fiver .my-3{
+    flex: 1;
+}
+.fiver{
+    gap: 10px;
+}
+
+#bar{
+    height: 5px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: green;
+    display: none;
+}
