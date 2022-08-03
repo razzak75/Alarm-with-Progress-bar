@@ -26,13 +26,16 @@ fiver_form.onsubmit = (e) => {
     let pbar = progressBar(startTime,endTime)
     pbar && (bar.style.display= 'block')
     bar.style.width = `${pbar}%`
+
     
 // Changing progress bar color
-    if (pbar < 30 ) {
+    if (pbar > 0 && pbar < 30 ) {
         bar.style.backgroundColor = "red";
-    } else if(pbar < 70 ) {
+    } else if(pbar > 30 && pbar < 70) {
         bar.style.backgroundColor = "yellow";
 
+    }else if(pbar <0){
+        bar.style.display = 'none';
     }
 
     }, 1000);  
