@@ -34,7 +34,7 @@ fiver_form.onsubmit = (e) => {
     } else if(pbar > 30 && pbar < 70) {
         bar.style.backgroundColor = "yellow";
 
-    }else if(pbar <0){
+    }else if(pbar == 0 || pbar < 0){
         bar.style.display = 'none';
     }
 
