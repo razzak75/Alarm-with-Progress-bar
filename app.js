@@ -29,13 +29,17 @@ fiver_form.onsubmit = (e) => {
 
     
 // Changing progress bar color
-    if (pbar > 0 && pbar < 30 ) {
+    if (pbar > 1 && pbar < 30 ) {
         bar.style.backgroundColor = "red";
     } else if(pbar > 30 && pbar < 70) {
         bar.style.backgroundColor = "yellow";
 
-    }else if(pbar == 0 || pbar < 0){
+    }else if(pbar < 1){
         bar.style.display = 'none';
+        bar.style.opacity = '0';
+        bar.style.height = '0';
+       
+
     }
 
     }, 1000);  

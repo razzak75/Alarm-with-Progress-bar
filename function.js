@@ -27,10 +27,17 @@ const Timer = (date,time,output,interval = null,alarm = null,tick= null,bar=null
     //Validation and output message
 
     if (!date || !time) {
-        output.innerHTML = `<h3 class="bg-danger rounded text-white text-center py-3">All fields are required! </h3>`   
+        output.innerHTML = `<h3 class="bg-danger rounded text-white text-center py-3">All fields are required! </h3>`
+        bar.style.display = 'none';
+        bar.style.opacity = '0';
+        bar.style.height = '0';
+
    } else {
         output.innerHTML = `<h3 class="bg-success rounded text-white text-center py-3"> ${totalDay} days : ${hours} hours : ${min} minutes : ${sec} sec</h3>`  
-        tick.play()        
+        tick.play()   
+        bar.style.display = 'block';
+        bar.style.opacity = '1';
+        bar.style.height = '8px';     
    }
 
   
